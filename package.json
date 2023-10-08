@@ -1,0 +1,19 @@
+{
+  "name": "sm-certificate-operations-lambda",
+  "version": "1.0.0",
+  "description": "This is an assessment task for \"Dormakaba\" for the role \"Cloud Software Developer\".",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Simeon-Minchev/sm-certificate-operations-lambda.git"
+  },
+  "author": "Simeon Minchev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Simeon-Minchev/sm-certificate-operations-lambda/issues"
+  },
+  "homepage": "https://github.com/Simeon-Minchev/sm-certificate-operations-lambda#readme"
+}
