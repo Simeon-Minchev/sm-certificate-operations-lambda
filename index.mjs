@@ -12,9 +12,6 @@ export const handler = async (event) => {
   const signature = certificate.signPublicKey();
   const commonName = certificate.getCommonName();
 
-  console.log(signature);
-  console.log(commonName);
-
   await dbClient.insertItem(commonName, certificate);
 
   const response = {

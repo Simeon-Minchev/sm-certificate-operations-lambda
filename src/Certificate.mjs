@@ -19,7 +19,7 @@ export class Certificate {
     const signature = this.certificateData.privateKey.sign(md);
     const signatureHex = forge.util.bytesToHex(signature);
 
-    return signatureHex
+    return signatureHex;
   }
 
   getCommonName() {
