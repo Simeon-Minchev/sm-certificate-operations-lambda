@@ -6,6 +6,10 @@ phases:
       - npm install
   build:
     commands:
-      - zip -r function.zip .  # Package the Lambda function code
+      - zip -r function.zip .
+  post_build:
+    commands:
+      - aws lambda update-function-code --function-name readCertificateData --zip-file fileb://function.zip
+
 artifacts:
   files: 'function.zip'

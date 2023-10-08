@@ -4,7 +4,8 @@
   "description": "This is an assessment task for \"Dormakaba\" for the role \"Cloud Software Developer\".",
   "main": "index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "start:local": "nodemon src/local"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/Simeon-Minchev/sm-certificate-operations-lambda/issues"
   },
-  "homepage": "https://github.com/Simeon-Minchev/sm-certificate-operations-lambda#readme"
+  "homepage": "https://github.com/Simeon-Minchev/sm-certificate-operations-lambda#readme",
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
 }
