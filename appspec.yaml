@@ -1,0 +1,10 @@
+
+version: 0.0
+resources:
+  - readCertificateData
+    Type: AWS::Lambda::Function
+      Properties:
+        Name: readCertificateData
+        Alias: production
+        CurrentVersion: 1
+        TargetVersion: 2
