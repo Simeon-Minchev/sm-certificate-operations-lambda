@@ -17,8 +17,8 @@ export class CertificateReader {
 
     const command = new GetObjectCommand(params);
     const response = await client.send(command);
-    const fileContent = response.Body.toString();
+    const fileContentString = response.Body.transformToString();
 
-    return fileContent;
+    return fileContentString;
   }
 }

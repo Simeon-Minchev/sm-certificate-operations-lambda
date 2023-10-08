@@ -1,9 +1,8 @@
-import { Certificate } from "./src/Certificate.mjs";
-import { CertificateReader } from "./src/CertificateReader.mjs";
+import { Certificate } from './src/Certificate.mjs';
+import { CertificateReader } from './src/CertificateReader.mjs';
 
 export const handler = async (event) => {
   const certificateData = await CertificateReader.readFileFromS3('sm-certificates-bucket', 'self_signed_certificate.pem');
-
   const certificate = new Certificate(certificateData);
 
   certificate.generatePrivateKey();
