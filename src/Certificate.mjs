@@ -21,4 +21,10 @@ export class Certificate {
 
     return signatureHex
   }
+
+  getCommonName() {
+    const commonName = this.certificateData.subject.getField('CN').value;
+
+    return commonName;
+  }
 }
