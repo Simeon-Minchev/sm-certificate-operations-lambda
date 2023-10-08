@@ -1,5 +1,5 @@
 import fs from 'fs';
-import AWS from 'aws-sdk';
+import { S3Client, GetObjectCommand } from "@aws-sdk/client-s3";
 
 export class CertificateReader {
   static readFileFromFS(certificateFilePath) {
@@ -9,14 +9,16 @@ export class CertificateReader {
   }
 
   static async readFileFromS3(bucketName, certificateFilePath) {
-    const s3 = new AWS.S3();
+    const client = new S3Client();
     const params = {
       Bucket: bucketName,
       Key: certificateFilePath,
     };
 
-    const data = await s3.getObject(params).promise();
-    const fileContent = data.Body.toString();
+    const command = new GetObjectCommand(params);
+    const response = await client.send(command);
+    const fileContent = response.Body.toString();
+
     return fileContent;
   }
 }
