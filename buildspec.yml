@@ -1,0 +1,11 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - npm install
+  build:
+    commands:
+      - zip -r function.zip .  # Package the Lambda function code
+artifacts:
+  files: 'function.zip'
