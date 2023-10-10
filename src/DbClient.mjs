@@ -13,7 +13,7 @@ export class DbClient {
           S: commonName,
         },
         CertificateSignature: {
-          S: signature.certificateData.signature,
+          S: signature,
         },
       },
     };

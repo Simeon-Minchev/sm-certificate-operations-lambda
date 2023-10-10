@@ -12,7 +12,7 @@ export const handler = async (event) => {
   const signature = certificate.signPublicKey();
   const commonName = certificate.getCommonName();
 
-  await dbClient.insertItem(commonName, certificate);
+  await dbClient.insertItem(commonName, signature);
 
   const response = {
     statusCode: 200,
